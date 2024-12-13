@@ -1,0 +1,64 @@
+{% load static %}
+<style>
+    /* Custom CSS to make the header sticky and transparent */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: transparent;  /* Make the header background transparent */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add light shadow for visibility */
+        padding: 10px 0;
+        transition: background-color 0.3s ease;  /* Smooth transition */
+    }
+
+    /* Optional: Change the header background on scroll for better visibility */
+    header.scrolled {
+        background-color: rgba(255, 255, 255, 0.9);  /* Semi-transparent white on scroll */
+    }
+
+    /* Ensure header text is visible on different backgrounds */
+    header a {
+        color: white;
+    }
+
+    body {
+        background-color: #f3f4f6;
+    }
+
+    .hero {
+        background: url('https://via.placeholder.com/1500x500.png') no-repeat center center;
+        background-size: cover;
+        height: 500px;
+    }
+
+    .button-custom {
+        background-color: rgb(124 58 237);
+        color: white;
+        border-radius: 8px;
+        padding: 12px 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button-custom:hover {
+        background-color: rgb(99 102 241);
+    }
+</style>
+
+<nav class="w-full px-8 text-gray-700 bg-white">
+    <div class="container mx-auto flex items-center justify-between py-2 max-w-7xl">
+        <div class="flex items-center">
+            <a href="{% url 'ml_app:homepage' %}" class="flex items-center mt-3 font-medium text-gray-900">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" class="h-15"></a></div>
+        <div class="inline-flex items-center space-x-6">
+            <a href="{% url 'ml_app:home' %}" class="text-base font-medium leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900">
+                Scan Now</a>
+            <a href="#_" class="font-medium leading-6 text-gray-600 hover:text-gray-900">Features</a>
+            <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</nav>
